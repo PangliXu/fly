@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>放炸弹</title>
+    <meta name="viewport" content="initial-scale=1.0, maximum-scale=1, user-scalable=no">
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+<div id="map"></div>
+
+<div id="game">
+    <div id="controller">
+        <div id="direction">
+            <span id="up">↑</span>
+            <span id="down">↓</span>
+            <span id="left">←</span>
+            <span id="right">→</span>
+        </div>
+        <div id="launch"><span>发射子弹</span></div>
+    </div>
+    <div id="start-button">
+        <input type="button" value="Start the game">
+        <input type="button" value="Restart the game" onclick="location.reload()">
+<!--        <input type="button" value="Increase the difficulty">-->
+    </div>
+    <br>
+    <ul id="rule">
+        <li>Rules of the game</li>
+        <li>1. 上下左右建控制红点的移动，空格控制子弹的发射</li>
+        <li>2. Rule One:当红点碰到蓝点，游戏结束</li>
+        <li>3. Rule Two:子弹与蓝点碰撞可以扫除蓝点</li>
+    </ul>
+</div>
+<script src="js/bomb.js"></script>
+<script src="js/game.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>

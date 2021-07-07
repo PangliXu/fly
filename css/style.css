@@ -1,0 +1,131 @@
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    box-sizing: border-box;
+}
+body {
+    background-color: peachpuff;
+}
+#map {
+    position: relative;
+    width: 100%;
+    height: 500px;
+    background-color: #999999;
+    margin-bottom: 50px;
+    padding-left: 10px;
+    overflow: hidden;
+    background-image: url("../img/pic02.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    /*opacity: .7;*/
+}
+#map>div {
+    border-radius: 50%;
+    box-shadow: 0 0 5px #fff,0 0 10px red,0 0 15px #fff,0 0 20px red;
+}
+#game {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+#game #start-button {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+#game #start-button input {
+    color: #ccc;
+    padding: 10px;
+    margin: 0 10px;
+    border: 1px solid #ccc;
+    box-shadow: 0 0 5px #ff9537;
+    border-radius: 5px;
+}
+#game #start-button input:hover {
+    color: white;
+    border-color: red;
+    background-color: red;
+    cursor: pointer;
+}
+#game #start-button input[disabled]:hover {
+    /*color: #ccc;*/
+    /*border-color: #ccc;*/
+    cursor: not-allowed;
+}
+#game #rule >li {
+    padding: 10px;
+    border: 1px dashed #ccc;
+}
+#game #rule >li {
+    line-height: 24px;
+}
+#game #rule >li:first-child {
+    text-align: center;
+    color: red;
+    font-weight: bold;
+}
+#controller {
+    display: none;
+}
+@media screen and (max-width: 440px) {
+    #map {
+        height: 300px;
+    }
+    #game #start-button input {
+        color: white;
+        border-color: red;
+        background-color: red;
+    }
+    #controller {
+        width: 100%;
+        height: 120px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+    }
+    #controller #direction {
+        position: relative;
+        left: 10px;
+        flex: 2;
+    }
+
+    #controller #direction span {
+        position: absolute;
+        left: 50px;
+        top: -50px;
+        width: 50px;
+        height: 50px;
+        line-height: 50px;
+
+        margin: 10px auto;
+
+        font-weight: bold;
+        text-align: center;
+        border: 1px solid #ccc;
+        border-radius: 10px;
+        box-shadow: 0 0 5px #ff9537;
+    }
+    #controller #direction span:nth-of-type(2) {
+        top: 50px;
+    }
+    #controller #direction span:nth-of-type(3) {
+        top: 0px;
+        left: 0px;
+    }
+    #controller #direction span:nth-of-type(4) {
+        top: 0px;
+        left: 100px;
+    }
+    #controller #launch {
+        flex: 1;
+        line-height: 100px;
+    }
+    #controller #launch span {
+        padding: 10px;
+
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        box-shadow: 0 0 5px #ff9537;
+    }
+}
